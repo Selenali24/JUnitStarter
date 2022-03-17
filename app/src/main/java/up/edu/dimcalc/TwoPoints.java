@@ -49,8 +49,8 @@ public class TwoPoints {
     /** calculates the distance between the two points rounded to the nearest integer */
     public double distance() {
         double result = 0.0;
-        int xDiff = points[0].x - points[1].x;
-        int yDiff = points[0].y - points[1].y;
+        double xDiff = points[0].x - points[1].x;
+        double yDiff = points[0].y - points[1].y;
         result = Math.sqrt(xDiff*xDiff + yDiff*yDiff);
         return result;
     }
@@ -64,12 +64,10 @@ public class TwoPoints {
             return result;
         }
 
-        int xDiff = points[0].x - points[1].x;
-        int yDiff = points[0].y - points[1].y;
+        double xDiff = points[0].x - points[1].x;
+        double yDiff = points[0].y - points[1].y;
 
-        result = xDiff / yDiff;
+        result = yDiff / xDiff;
         return result;
     }
-
-
 }//TwoPoints
